@@ -1,5 +1,5 @@
 @echo off
-:: THIS IS A COMMENT ::
+::## Author: Daniel Ospina GitHub: danielospina-b
 
 :: Change next line if at runtime the MAC Address is not correct ::
 set ADAPTER=Realtek
