@@ -4,6 +4,12 @@
 :: Change next line if at runtime the MAC Address is not correct ::
 set ADAPTER=Realtek
 
+:: Print info for the user
+echo.
+echo "········ IPv6 DUID Configuration Script ········"
+echo.
+echo "This file contains comments, in case the script does not work as expected..."
+echo.
 echo Printing all MAC Addresses in PC...
 getmac /v
 echo =================================================================
