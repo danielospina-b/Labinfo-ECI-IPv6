@@ -6,7 +6,7 @@ set ADAPTER=Realtek
 
 :: Print info for the user
 echo.
-echo "········ IPv6 DUID Configuration Script ········"
+echo ######## IPv6 DUID Configuration Script ########
 echo.
 echo "This file contains comments, in case the script does not work as expected..."
 echo.
