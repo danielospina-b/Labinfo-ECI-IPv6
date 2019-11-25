@@ -1,4 +1,6 @@
 @echo off
+echo Hostname: %COMPUTERNAME%
+echo.
 ::## Author: Daniel Ospina GitHub: danielospina-b
 
 :: Change next line if at runtime the MAC Address is not correct ::
@@ -13,10 +15,12 @@ set PREFIJO=00010001ec10ec10
 
 :: Ask user to cancel execution if something is wrong ::
 echo Setting DUID as: %PREFIJO%%MAC%
-echo Done.
 
 :: Add to the registry the value (/v) of type (/t) binary with the DUID as data (/d) and without prompting confirmation (/f)::
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters /v Dhcpv6DUID /t REG_BINARY /d %PREFIJO%%MAC% /f
+echo.
 
 :: Set IPv6 Prefix Policy
+echo Setting IPv6 Prefix Policy...
 netsh interface ipv6 add prefixpolicy fd00:3c1:102::/64 38 1 store=persistent
+pause
