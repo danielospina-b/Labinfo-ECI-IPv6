@@ -48,5 +48,8 @@ echo.
 :: Add to the registry the value (/v) of type (/t) binary with the DUID as data (/d) and without prompting confirmation (/f)::
 REG ADD HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters /v Dhcpv6DUID /t REG_BINARY /d %PREFIJO%%MAC% /f
 
+:: Set IPv6 Prefix Policy
+echo Setting IPv6 Prefix Policy...
+netsh interface ipv6 add prefixpolicy fd00:3c1:102::/64 38 1 store=persistent
 echo Please Restart Windows to Apply Changes
 pause

@@ -29,3 +29,4 @@ The .bat script is executed printing the final DUID value added to the registry,
 ## Linux
 
 This script creates a new dhclient6.conf file used by the OS in the DHCP process with the needed configuration data.
+Then adds /etc/gai.conf configuration lines for IP Prefix Policy.
