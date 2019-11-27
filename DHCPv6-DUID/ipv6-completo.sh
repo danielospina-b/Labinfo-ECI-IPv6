@@ -43,6 +43,8 @@ echo "New DHCP6 Client DUID value : 00:01:00:01:ec:10:ec:10:\e[4m$MAC_ADDRESS\e[
 
 echo "Setting IP Prefix Policy..."
 
+# Prefix Policy is controlled by /etc/gai.conf
+# Default policy lines are added plus labinfo prefix
 tee -a /etc/gai.conf << END > /dev/null
 label ::1/128       0
 label ::/0          1
